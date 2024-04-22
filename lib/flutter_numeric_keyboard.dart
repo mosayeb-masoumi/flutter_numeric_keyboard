@@ -76,7 +76,6 @@ class FlutterNumericKeyboard extends StatefulWidget {
 }
 
 class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
-
   /// The currently inputted numeric value.
   String resultNumber = "";
 
@@ -135,7 +134,6 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
       ],
     );
   }
-
 
   /// Builds a row of digits for the keyboard.
   Widget buildRow(String leftNumber, String middleNumber, String rightNumber,
@@ -259,7 +257,6 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
-
   /// Builds a horizontal divider between rows.
   Widget buildHorizontalDivider(Size size, Color? dividerColor) {
     return Container(
@@ -293,7 +290,7 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
       height: size.height,
       decoration: BoxDecoration(
           gradient: dividerColor == null
-              ?const LinearGradient(
+              ? const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
@@ -307,7 +304,6 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
           color: dividerColor),
     );
   }
-
 
   /// Builds a vertical divider for the bottom part of the keyboard.
   Widget buildBottomDivider(Size size, Color? dividerColor) {
@@ -330,7 +326,6 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
           color: dividerColor),
     );
   }
-
 
   /// Builds a vertical divider for the middle part of the keyboard.
   Widget buildMiddleDivider(Size size, Color? dividerColor) {

@@ -28,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
         // child: Center(child: FlutterNumericKeyboard(),),
         child: Column(
           children: [
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             FlutterNumericKeyboard(
                 width: 300,
                 height: 400,
@@ -76,7 +77,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-
     );
   }
 }
