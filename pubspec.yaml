@@ -1,6 +1,6 @@
 name: flutter_numeric_keyboard
 description: "flutter_numeric_keyboard: A versatile Flutter widget for displaying and interacting with customizable numeric inputs. Perfect for PIN entry forms."
-version: 1.0.1+2
+version: 1.0.3+4
 homepage: https://github.com/mosayeb-masoumi/flutter_numeric_keyboard
 
 environment:

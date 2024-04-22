@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 /// This widget allows users to input numeric values through a customizable
