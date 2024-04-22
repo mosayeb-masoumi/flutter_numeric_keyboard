@@ -1,20 +1,55 @@
+/// A Flutter widget for displaying a numeric keyboard.
+///
+/// This widget allows users to input numeric values through a customizable
+/// interface. It supports various customization options such as setting
+/// the width, height, colors, styles, and icons.
+
 import 'package:flutter/material.dart';
 
 class FlutterNumericKeyboard extends StatefulWidget {
+  /// The width of the keyboard
   final double? width;
+
+  /// The height of the keyboard.
   final double? height;
+
+  /// Whether to show the result field above the keyboard.
   final bool? showResult;
+
+  /// A callback function to handle the result value.
   final Function(String value)? resultFunction;
+
+  /// Whether to obscure the result value.
   final bool? obscureResult;
+
+  /// Whether to show the divider between rows and columns.
   final bool? showDivider;
+
+  /// The color of the divider.
   final Color? dividerColor;
+
+  /// The style for the digits.
   final TextStyle? digitStyle;
+
+  /// The text style for the result field.
   final TextStyle? resultTextStyle;
+
+  /// The background color of the keyboard.
   final Color? backgroundColor;
+
+  /// The border radius of the keyboard background.
   final double? backgroundRadius;
+
+  /// Whether to show the right icon.
   final bool? showRightIcon;
+
+  /// The icon for the back action.
   final Icon? rightIconBack;
+
+  /// The icon for the reset action.
   final Icon? leftIconReset;
+
+  /// Whether to show the left icon.
   final bool? showLeftIcon;
 
   const FlutterNumericKeyboard({
@@ -41,6 +76,8 @@ class FlutterNumericKeyboard extends StatefulWidget {
 }
 
 class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
+
+  /// The currently inputted numeric value.
   String resultNumber = "";
 
   @override
@@ -99,6 +136,8 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
+
+  /// Builds a row of digits for the keyboard.
   Widget buildRow(String leftNumber, String middleNumber, String rightNumber,
       Size size, Color? dividerColor) {
     return Row(
@@ -220,6 +259,8 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
+
+  /// Builds a horizontal divider between rows.
   Widget buildHorizontalDivider(Size size, Color? dividerColor) {
     return Container(
       width: size.width,
@@ -245,6 +286,7 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
+  /// Builds a vertical divider for the top part of the keyboard.
   Widget buildTopDivider(Size size, Color? dividerColor) {
     return Container(
       width: 1,
@@ -266,6 +308,8 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
+
+  /// Builds a vertical divider for the bottom part of the keyboard.
   Widget buildBottomDivider(Size size, Color? dividerColor) {
     return Container(
       width: 1,
@@ -287,6 +331,8 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
+
+  /// Builds a vertical divider for the middle part of the keyboard.
   Widget buildMiddleDivider(Size size, Color? dividerColor) {
     return Container(
       width: 1,
@@ -295,6 +341,7 @@ class _FlutterNumericKeyboardState extends State<FlutterNumericKeyboard> {
     );
   }
 
+  /// Obscures the inputted string by replacing each character with '*'.
   String obscureString(String input) {
     return input.replaceAll(RegExp(r'.'), '*');
   }
