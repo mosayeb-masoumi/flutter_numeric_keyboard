@@ -1,10 +1,9 @@
-/// A Flutter widget for displaying a numeric keyboard.
-///
+
+import 'package:flutter/material.dart';
+
 /// This widget allows users to input numeric values through a customizable
 /// interface. It supports various customization options such as setting
 /// the width, height, colors, styles, and icons.
-
-import 'package:flutter/material.dart';
 
 class FlutterNumericKeyboard extends StatefulWidget {
   /// The width of the keyboard
